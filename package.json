@@ -1,6 +1,21 @@
 {
   "name": "functions",
+  "private": false,
+  "version": "0.0.1",
+  "repository": "https://github.com/TexteaInc/functions",
+  "bugs": {
+    "url": "https://github.com/TexteaInc/functions/issues"
+  },
+  "homepage": "https://github.com/TexteaInc/functions#readme",
+  "files": [
+    "dist"
+  ],
   "packageManager": "yarn@3.2.1",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
   "devDependencies": {
     "@mui/material": "^5.8.6",
     "@types/react": "^18.0.14",
