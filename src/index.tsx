@@ -1,6 +1,5 @@
 import { Checkbox, FormControlLabel } from '@mui/material'
 import {
-  SheetFunction,
   SheetTransformFunction
 } from '@textea/shared'
 
@@ -69,5 +68,3 @@ export const transformers: SheetTransformFunction<any>[] = [
   toLowerCase,
   tokenize
 ]
-
-export const functions: SheetFunction<any>[] = [...transformers]
