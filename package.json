@@ -1,6 +1,5 @@
 {
   "name": "@textea/functions",
-  "private": false,
   "version": "0.0.1",
   "repository": "https://github.com/TexteaInc/functions",
   "bugs": {
@@ -23,6 +22,6 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "@textea/shared": "^0.1.1"
+    "@textea/shared": "^0.2.0"
   }
 }

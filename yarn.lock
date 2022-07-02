@@ -218,12 +218,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@textea/shared@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "@textea/shared@npm:0.1.1"
+"@textea/functions@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@textea/functions@workspace:."
+  dependencies:
+    "@mui/material": ^5.8.6
+    "@textea/shared": ^0.2.0
+    "@types/react": ^18.0.14
+    react: ^18.2.0
+    typescript: ^4.7.4
+  languageName: unknown
+  linkType: soft
+
+"@textea/shared@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@textea/shared@npm:0.2.0"
   dependencies:
     "@types/react": ^18.0.14
-  checksum: 4878a83583831c0386721cd4c717dfdc039f34b472b6954dc2a57ca2b17d1cbf18d2861883b8399728fe99970df626d6850ccfd684bf7a94c1ea190a4c0c9516
+  checksum: b131e8101f08cb86cfd216381c863c727a3f6f790f22918559ab0378bf7de34446be8508a829c44012fb62c70e210bdaf553d308fe641c5dfe1e125bfca22a71
   languageName: node
   linkType: hard
 
@@ -293,18 +305,6 @@ __metadata:
   checksum: 863ba9e086f7093df3376b43e74ce4422571d404fc9828bf2c56140963d5edf0e56160f9b2f3bb61b282c07f8fc8134f023c98fd684bddcb12daf7b0f14d951c
   languageName: node
   linkType: hard
-
-"functions@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "functions@workspace:."
-  dependencies:
-    "@mui/material": ^5.8.6
-    "@textea/shared": ^0.1.1
-    "@types/react": ^18.0.14
-    react: ^18.2.0
-    typescript: ^4.7.4
-  languageName: unknown
-  linkType: soft
 
 "js-tokens@npm:^3.0.0 || ^4.0.0":
   version: 4.0.0
