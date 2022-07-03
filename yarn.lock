@@ -9,7 +9,7 @@ __metadata:
   resolution: "@textea/functions@workspace:."
   peerDependencies:
     "@mui/material": ">=5.8.6"
-    "@textea/shared": ">=0.2.0"
+    "@textea/shared": ">=0.3.0"
     "@types/react": ">=18.0.14"
     react: ">=18.2.0"
     react-dom: ">=18.2.0"
