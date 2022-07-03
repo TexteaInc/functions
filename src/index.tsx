@@ -1,11 +1,9 @@
 import { Checkbox, FormControlLabel } from '@mui/material'
-import {
-  SheetTransformFunction
-} from '@textea/shared'
+import type { SheetMapFunction } from '@textea/shared'
 
-export const toUpperCase: SheetTransformFunction = {
+export const toUpperCase: SheetMapFunction = {
   id: '9d22aac0-07b9-4ff4-92f5-abfb91bde75b',
-  type: 'transform',
+  type: 'map',
   name: 'To Upper Case',
   defaultConfig: {},
   func: async (array: string[]) => {
@@ -13,9 +11,9 @@ export const toUpperCase: SheetTransformFunction = {
   }
 }
 
-export const toLowerCase: SheetTransformFunction = {
+export const toLowerCase: SheetMapFunction = {
   id: '37bf1172-94ba-42d4-8530-0316bc7e2968',
-  type: 'transform',
+  type: 'map',
   name: 'To Lower Case',
   defaultConfig: {},
   func: async (array: string[]) => {
@@ -27,9 +25,9 @@ type TokenizeConfig = {
   keepContractions: boolean
 }
 
-export const tokenize: SheetTransformFunction<TokenizeConfig> = {
+export const tokenize: SheetMapFunction<TokenizeConfig> = {
   id: 'caff9337-1b32-4d59-92bf-d25671b3896c',
-  type: 'transform',
+  type: 'map',
   name: 'Tokenize',
   func: async (array: (string | number)[], config: TokenizeConfig) => {
     if (config.keepContractions) {
@@ -63,7 +61,7 @@ export const tokenize: SheetTransformFunction<TokenizeConfig> = {
   }
 }
 
-export const transformers: SheetTransformFunction<any>[] = [
+export const transformers: SheetMapFunction<any>[] = [
   toUpperCase,
   toLowerCase,
   tokenize
