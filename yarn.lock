@@ -8,6 +8,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@textea/functions@workspace:."
   peerDependencies:
+    "@emotion/react": ">=11.9.3"
+    "@emotion/styled": ">=11.9.3"
     "@mui/material": ">=5.8.6"
     "@textea/shared": ">=0.3.0"
     "@types/react": ">=18.0.14"
