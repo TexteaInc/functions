@@ -1,55 +1,97 @@
-import { Checkbox, FormControlLabel } from '@mui/material'
-import type { SheetMapFunction } from '@textea/shared'
+import {
+  Checkbox,
+  FormControlLabel
+} from '@mui/material'
+import { cellTypes, createSheetFunction, SheetFunction } from '@textea/shared'
 
-export const toUpperCase: SheetMapFunction = {
-  id: '9d22aac0-07b9-4ff4-92f5-abfb91bde75b',
-  type: 'map',
-  name: 'To Upper Case',
-  defaultConfig: {},
-  func: async (array: string[]) => {
-    return array.map((text) => text.toUpperCase())
-  }
-}
+export const toUpperCase = createSheetFunction(
+  '9d22aac0-07b9-4ff4-92f5-abfb91bde75b',
+  'To Upper Case',
+  'map',
+  {
+    input: {
+      type: cellTypes.String,
+      name: 'Input'
+    }
+  },
+  {
+    output: {
+      type: cellTypes.String,
+      name: 'Output'
+    }
+  },
+  {},
+  async (columns) => {
+    return [columns[0].map((text) => text.toUpperCase())]
+  },
+  undefined
+)
 
-export const toLowerCase: SheetMapFunction = {
-  id: '37bf1172-94ba-42d4-8530-0316bc7e2968',
-  type: 'map',
-  name: 'To Lower Case',
-  defaultConfig: {},
-  func: async (array: string[]) => {
-    return array.map((text) => text.toLowerCase())
-  }
-}
+export const toLowerCase = createSheetFunction(
+  '37bf1172-94ba-42d4-8530-0316bc7e2968',
+  'To Lower Case',
+  'map',
+  {
+    input: {
+      type: cellTypes.String,
+      name: 'Input'
+    }
+  },
+  {
+    output: {
+      type: cellTypes.String,
+      name: 'Output'
+    }
+  },
+  {},
+  async (columns) => {
+    return [columns[0].map((text) => text.toUpperCase())]
+  },
+  undefined
+)
 
-type TokenizeConfig = {
+export type TokenizeConfig = {
   keepContractions: boolean
 }
 
-export const tokenize: SheetMapFunction<TokenizeConfig> = {
-  id: 'caff9337-1b32-4d59-92bf-d25671b3896c',
-  type: 'map',
-  name: 'Tokenize',
-  func: async (array: (string | number)[], config: TokenizeConfig) => {
-    if (config.keepContractions) {
-      return array.map(
-        (text) => String(text).match(/\w[\w'-.]*[\w']|\w|[^\w\s]+/g) ?? [text])
-    } else {
-      return array.map(
-        (text) => String(text).match(/'?\w+|[^\w\s]+/g) ?? [text])
+export const tokenize = createSheetFunction(
+  'caff9337-1b32-4d59-92bf-d25671b3896c',
+  'Tokenize',
+  'map',
+  {
+    input: {
+      type: cellTypes.String,
+      name: 'Input'
     }
   },
-  defaultConfig: {
+  {
+    output: {
+      type: cellTypes.Array,
+      name: 'Output'
+    }
+  },
+  {
     keepContractions: false
   },
-  config: ({ config, onChangeConfig }) => {
+  async (columns, config) => {
+    if (config.keepContractions) {
+      return [
+        columns[0].map(
+          text => String(text).match(/\w[\w'-.]*[\w']|\w|[^\w\s]+/g) ?? [text])]
+    } else {
+      return [
+        columns[0].map(text => String(text).match(/'?\w+|[^\w\s]+/g) ?? [text])]
+    }
+  },
+  (props) => {
     return (
       <FormControlLabel
         label="keep_contractions"
         control={
           <Checkbox
-            checked={config.keepContractions}
+            checked={props.config.keepContractions}
             onChange={(event) => {
-              onChangeConfig((config) => ({
+              props.onChangeConfig((config) => ({
                 ...config,
                 keepContractions: event.target.checked
               }))
@@ -59,9 +101,9 @@ export const tokenize: SheetMapFunction<TokenizeConfig> = {
       />
     )
   }
-}
+)
 
-export const transformers: SheetMapFunction<any>[] = [
+export const mapFunctions: SheetFunction<'map', any, any, any>[] = [
   toUpperCase,
   toLowerCase,
   tokenize
