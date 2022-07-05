@@ -10,7 +10,7 @@
     "dist"
   ],
   "packageManager": "yarn@3.2.1",
-  "main": "./dist/index.jsx",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
