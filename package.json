@@ -17,9 +17,6 @@
     "build": "tsc",
     "dev": "npx npm-install-peers"
   },
-  "dependencies": {
-    "@textea/shared": "^0.4.3"
-  },
   "devDependencies": {
     "typescript": "^4.7.4"
   },
@@ -27,6 +24,7 @@
     "@emotion/react": ">=11.9.3",
     "@emotion/styled": ">=11.9.3",
     "@mui/material": ">=5.8.6",
+    "@textea/shared": ">=0.4.5",
     "@types/react": ">=18.0.14",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
