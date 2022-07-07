@@ -2,7 +2,11 @@ import {
   Checkbox,
   FormControlLabel
 } from '@mui/material'
-import { cellTypes, createSheetFunction, SheetFunction } from '@textea/shared/sheet'
+import {
+  cellTypes,
+  createSheetFunction,
+  SheetFunction
+} from '@textea/shared/sheet'
 
 export const toUpperCase = createSheetFunction(
   '9d22aac0-07b9-4ff4-92f5-abfb91bde75b',
@@ -22,7 +26,7 @@ export const toUpperCase = createSheetFunction(
   },
   {},
   async (columns) => {
-    return [columns[0].map((text) => text.toUpperCase())]
+    return { output: columns.input.map((text) => text.toUpperCase()) }
   },
   undefined
 )
@@ -45,7 +49,7 @@ export const toLowerCase = createSheetFunction(
   },
   {},
   async (columns) => {
-    return [columns[0].map((text) => text.toUpperCase())]
+    return { output: columns.input.map((text) => text.toUpperCase()) }
   },
   undefined
 )
@@ -75,12 +79,15 @@ export const tokenize = createSheetFunction(
   },
   async (columns, config) => {
     if (config.keepContractions) {
-      return [
-        columns[0].map(
-          text => String(text).match(/\w[\w'-.]*[\w']|\w|[^\w\s]+/g) ?? [text])]
+      return {
+        output: columns.input.map(
+          text => String(text).match(/\w[\w'-.]*[\w']|\w|[^\w\s]+/g) ?? [text])
+      }
     } else {
-      return [
-        columns[0].map(text => String(text).match(/'?\w+|[^\w\s]+/g) ?? [text])]
+      return {
+        output: columns.input.map(
+          text => String(text).match(/'?\w+|[^\w\s]+/g) ?? [text])
+      }
     }
   },
   (props) => {
@@ -103,7 +110,7 @@ export const tokenize = createSheetFunction(
   }
 )
 
-export const mapFunctions: SheetFunction<'map', any, any, any>[] = [
+export const mapFunctions: SheetFunction<'map'>[] = [
   toUpperCase,
   toLowerCase,
   tokenize
