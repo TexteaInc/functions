@@ -15,7 +15,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "npx npm-install-peers"
+    "postinstall": "npx npm-install-peers"
   },
   "devDependencies": {
     "typescript": "^4.7.4"
@@ -24,7 +24,7 @@
     "@emotion/react": ">=11.9.3",
     "@emotion/styled": ">=11.9.3",
     "@mui/material": ">=5.8.6",
-    "@textea/shared": ">=0.5.0",
+    "@textea/shared": ">=0.7.0",
     "@types/react": ">=18.0.14",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
