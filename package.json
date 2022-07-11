@@ -1,13 +1,6 @@
 {
   "name": "@textea/functions",
   "version": "0.2.3",
-  "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
   "repository": "https://github.com/TexteaInc/functions",
   "bugs": {
     "url": "https://github.com/TexteaInc/functions/issues"
