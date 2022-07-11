@@ -6,7 +6,7 @@ import {
   cellTypes,
   createSheetFunction,
   SheetFunction
-} from '@textea/shared/sheet'
+} from '@textea/shared'
 
 export const toUpperCase = createSheetFunction(
   '9d22aac0-07b9-4ff4-92f5-abfb91bde75b',
@@ -92,6 +92,7 @@ export const tokenize = createSheetFunction(
   },
   (props) => {
     return (
+      // @ts-ignore
       <FormControlLabel
         label="keep_contractions"
         control={
