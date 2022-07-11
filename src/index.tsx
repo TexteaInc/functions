@@ -1,8 +1,9 @@
+/* @jsxRuntime automatic @jsxImportSource @emotion/react */
 import {
   Checkbox,
   FormControlLabel
 } from '@mui/material'
-const { cellTypes, createSheetFunction } = await import('@textea/shared')
+import { cellTypes, createSheetFunction } from '@textea/shared'
 
 export const toUpperCase = createSheetFunction(
   '9d22aac0-07b9-4ff4-92f5-abfb91bde75b',

@@ -5,6 +5,7 @@
     "outDir": "dist",
     "baseUrl": "./src",
     "strictNullChecks": true,
+    "emitDeclarationOnly": true,
     "exactOptionalPropertyTypes": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
