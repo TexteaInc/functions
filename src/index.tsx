@@ -49,7 +49,7 @@ export const toLowerCase = createSheetFunction(
   },
   {},
   async (columns) => {
-    return { output: columns.input.map((text) => text.toUpperCase()) }
+    return { output: columns.input.map((text) => text.toLowerCase()) }
   },
   undefined
 )
