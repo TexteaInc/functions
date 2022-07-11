@@ -2,6 +2,12 @@
   "name": "@textea/functions",
   "version": "0.2.1",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
   "repository": "https://github.com/TexteaInc/functions",
   "bugs": {
     "url": "https://github.com/TexteaInc/functions/issues"
@@ -23,9 +29,9 @@
   "peerDependencies": {
     "@emotion/react": ">=11.9.3",
     "@emotion/styled": ">=11.9.3",
-    "@mui/material": ">=5.8.6",
-    "@textea/shared": ">=0.7.0",
-    "@types/react": ">=18.0.14",
+    "@mui/material": ">=5.8.7",
+    "@textea/shared": ">=0.8.1",
+    "@types/react": ">=18.0.15",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
   }
