@@ -88,7 +88,6 @@ export const tokenize = createSheetFunction(
   },
   (props) => {
     return (
-      // @ts-ignore
       <FormControlLabel
         label="keep_contractions"
         control={
