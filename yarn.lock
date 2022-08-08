@@ -575,7 +575,7 @@ __metadata:
     "@mui/material": ^5.8.7
     "@swc/cli": ^0.1.57
     "@swc/core": ^1.2.212
-    "@textea/shared": ^0.8.1
+    "@textea/shared": ^0.10.0-alpha.0
     "@types/react": ^18.0.15
     "@types/react-dom": ^18.0.6
     react: ^18.2.0
@@ -585,7 +585,7 @@ __metadata:
     "@emotion/react": ">=11.9.3"
     "@emotion/styled": ">=11.9.3"
     "@mui/material": ">=5.8.7"
-    "@textea/shared": ">=0.8.1"
+    "@textea/shared": ">=0.10.0-alpha.0"
     "@types/react": ">=18.0.15"
     "@types/react-dom": ">=18.0.6"
     react: ">=18.2.0"
@@ -593,13 +593,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@textea/shared@npm:^0.8.1":
-  version: 0.8.1
-  resolution: "@textea/shared@npm:0.8.1"
+"@textea/shared@npm:^0.10.0-alpha.0":
+  version: 0.10.0-alpha.0
+  resolution: "@textea/shared@npm:0.10.0-alpha.0"
   peerDependencies:
-    "@mui/material": ">=5.8.7"
+    "@mui/material": ">=5.9.0"
     "@types/react": ">=18.0.15"
-  checksum: da17d04ce9f1c8550f15a7b8221e881f1a7493e6c6ec75de2906f9381a0b999a776ae62421b4bc20b5803f1614a9b3b9e239858e73e10b0d7f79446912dee839
+    "@types/web": ">=0.0.69"
+  checksum: 9f0aa2277448d24c0d901f36174374420f8e0f444484cd13f3d7c6c3bb8c1049f0f6ac9f6e9f12b4a74e704016c2c7795d3b4d275d6073764697fb4ff14e6a5e
   languageName: node
   linkType: hard
 
