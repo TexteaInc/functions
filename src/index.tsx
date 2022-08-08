@@ -3,7 +3,7 @@ import {
   Checkbox,
   FormControlLabel
 } from '@mui/material'
-import { cellTypes, createSheetFunction } from '@textea/shared'
+import { baseCellTypes, createSheetFunction } from '@textea/shared'
 
 export const toUpperCase = createSheetFunction(
   '9d22aac0-07b9-4ff4-92f5-abfb91bde75b',
@@ -11,13 +11,13 @@ export const toUpperCase = createSheetFunction(
   'map',
   {
     input: {
-      type: cellTypes.String,
+      type: new baseCellTypes.String(),
       name: 'Input'
     }
   },
   {
     output: {
-      type: cellTypes.String,
+      type: new baseCellTypes.String(),
       name: 'Output'
     }
   },
@@ -34,13 +34,13 @@ export const toLowerCase = createSheetFunction(
   'map',
   {
     input: {
-      type: cellTypes.String,
+      type: new baseCellTypes.String(),
       name: 'Input'
     }
   },
   {
     output: {
-      type: cellTypes.String,
+      type: new baseCellTypes.String(),
       name: 'Output'
     }
   },
@@ -61,13 +61,13 @@ export const tokenize = createSheetFunction(
   'map',
   {
     input: {
-      type: cellTypes.String,
+      type: new baseCellTypes.String(),
       name: 'Input'
     }
   },
   {
     output: {
-      type: cellTypes.Array,
+      type: new baseCellTypes.Array(),
       name: 'Output'
     }
   },
