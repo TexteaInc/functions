@@ -578,6 +578,7 @@ __metadata:
     "@textea/shared": ^0.10.0-alpha.0
     "@types/react": ^18.0.15
     "@types/react-dom": ^18.0.6
+    "@types/web": ^0.0.71
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^4.7.4
@@ -660,6 +661,13 @@ __metadata:
   version: 0.16.2
   resolution: "@types/scheduler@npm:0.16.2"
   checksum: b6b4dcfeae6deba2e06a70941860fb1435730576d3689225a421280b7742318d1548b3d22c1f66ab68e414f346a9542f29240bc955b6332c5b11e561077583bc
+  languageName: node
+  linkType: hard
+
+"@types/web@npm:^0.0.71":
+  version: 0.0.71
+  resolution: "@types/web@npm:0.0.71"
+  checksum: eacf6c5944b60fc15f3ec723d1d72fc822b4813dca53244c98be56aabf6f20f0aa0d611311209e9bc126f48633a66f1d6565746ec4adf598df4cf1c21114d82b
   languageName: node
   linkType: hard
 
