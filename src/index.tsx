@@ -11,13 +11,13 @@ export const toUpperCase = createSheetFunction(
   'map',
   {
     input: {
-      type: new baseCellTypes.String(),
+      type: baseCellTypes.string,
       name: 'Input'
     }
   },
   {
     output: {
-      type: new baseCellTypes.String(),
+      type: baseCellTypes.string,
       name: 'Output'
     }
   },
@@ -34,13 +34,13 @@ export const toLowerCase = createSheetFunction(
   'map',
   {
     input: {
-      type: new baseCellTypes.String(),
+      type: baseCellTypes.string,
       name: 'Input'
     }
   },
   {
     output: {
-      type: new baseCellTypes.String(),
+      type: baseCellTypes.string,
       name: 'Output'
     }
   },
@@ -61,13 +61,13 @@ export const tokenize = createSheetFunction(
   'map',
   {
     input: {
-      type: new baseCellTypes.String(),
+      type: baseCellTypes.string,
       name: 'Input'
     }
   },
   {
     output: {
-      type: new baseCellTypes.Array(),
+      type: baseCellTypes.array,
       name: 'Output'
     }
   },

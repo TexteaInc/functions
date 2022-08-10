@@ -29,7 +29,7 @@
     "@mui/material": "^5.8.7",
     "@swc/cli": "^0.1.57",
     "@swc/core": "^1.2.212",
-    "@textea/shared": "^0.10.0-alpha.0",
+    "@textea/shared": "^0.10.0-alpha.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@types/web": "^0.0.71",
