@@ -1,6 +1,6 @@
 {
   "name": "@textea/functions",
-  "version": "0.3.0-alpha.1",
+  "version": "0.3.0-alpha.2",
   "repository": "https://github.com/TexteaInc/functions",
   "bugs": {
     "url": "https://github.com/TexteaInc/functions/issues"
@@ -21,7 +21,8 @@
   "scripts": {
     "build:source": "npx swc ./src -d dist",
     "build:type": "tsc",
-    "build": "yarn build:source && yarn build:type"
+    "build": "yarn build:source && yarn build:type",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@emotion/react": "^11.9.3",
