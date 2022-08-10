@@ -6,43 +6,45 @@
     "url": "https://github.com/TexteaInc/functions/issues"
   },
   "homepage": "https://github.com/TexteaInc/functions#readme",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "files": [
-    "dist"
+    "dist",
+    "yarn.lock"
   ],
-  "packageManager": "yarn@3.2.1",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.umd.js",
+      "require": "./dist/index.js"
     }
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "scripts": {
-    "build:source": "npx swc ./src -d dist",
-    "build:type": "tsc",
-    "build": "yarn build:source && yarn build:type",
+    "build": "tsc && vite build",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.8.7",
-    "@swc/cli": "^0.1.57",
-    "@swc/core": "^1.2.212",
     "@textea/shared": "^0.10.0-alpha.3",
+    "@types/node": "^18.6.5",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@types/web": "^0.0.71",
+    "@vitejs/plugin-react": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "vite": "^3.0.5",
+    "vite-plugin-dts": "^1.4.1"
   },
   "peerDependencies": {
     "@emotion/react": ">=11.9.3",
     "@emotion/styled": ">=11.9.3",
     "@mui/material": ">=5.8.7",
-    "@textea/shared": ">=0.10.0-alpha.0",
+    "@textea/shared": ">=0.10.0-alpha.3",
     "@types/react": ">=18.0.15",
     "@types/react-dom": ">=18.0.6",
     "react": ">=18.2.0",
