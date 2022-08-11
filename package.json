@@ -1,6 +1,6 @@
 {
   "name": "@textea/functions",
-  "version": "0.3.0-alpha.3",
+  "version": "0.3.0",
   "repository": "https://github.com/TexteaInc/functions",
   "bugs": {
     "url": "https://github.com/TexteaInc/functions/issues"
