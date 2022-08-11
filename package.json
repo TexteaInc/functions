@@ -25,29 +25,30 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@mui/material": "^5.8.7",
-    "@textea/shared": "^0.10.0-alpha.3",
-    "@types/node": "^18.6.5",
-    "@types/react": "^18.0.15",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.10.0",
+    "@textea/dev-kit": "^0.11.2",
+    "@types/node": "^18.7.1",
+    "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "@types/uuid": "^8.3.4",
     "@types/web": "^0.0.71",
     "@vitejs/plugin-react": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.7.4",
+    "uuid": "^8.3.2",
     "vite": "^3.0.5",
     "vite-plugin-dts": "^1.4.1"
   },
   "peerDependencies": {
-    "@emotion/react": ">=11.9.3",
-    "@emotion/styled": ">=11.9.3",
-    "@mui/material": ">=5.8.7",
-    "@textea/shared": ">=0.10.0-alpha.3",
-    "@types/react": ">=18.0.15",
-    "@types/react-dom": ">=18.0.6",
-    "react": ">=18.2.0",
-    "react-dom": ">=18.2.0"
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@mui/material": "^5",
+    "@textea/shared": "*",
+    "react": "^18",
+    "react-dom": "^18",
+    "uuid": "^8"
   }
 }
