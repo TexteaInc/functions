@@ -12,7 +12,7 @@ export default defineConfig({
     lib: {
       formats: ['es', 'cjs', 'umd'],
       entry: resolve(__dirname, 'src/index.tsx'),
-      name: 'TexteaShared',
+      name: '@textea/functions',
       fileName: 'index'
     },
     rollupOptions: {
