@@ -1,0 +1,37 @@
+name: Release Please
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          package-name: "@textea/functions"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v3
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          node-version-file: ".nvmrc"
+          cache: "yarn"
+          registry-url: "https://registry.npmjs.org"
+      - name: Install dependencies
+        if: ${{ steps.release.outputs.release_created }}
+        run: yarn install
+      - name: Build Output
+        if: ${{ steps.release.outputs.release_created }}
+        run: yarn build
+      - uses: JS-DevTools/npm-publish@v1
+        name: Publish to npm
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          access: "public"
+          token: ${{ secrets.NPM_TOKEN }}
