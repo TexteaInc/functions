@@ -2,7 +2,7 @@ import {
   Checkbox,
   FormControlLabel
 } from '@mui/material'
-import { baseCellTypes, createSheetFunction } from '@textea/dev-kit'
+import { baseCellTypes, createSheetFunction } from '@textea/dev-kit/sheet'
 
 export const toUpperCase = createSheetFunction(
   '9d22aac0-07b9-4ff4-92f5-abfb91bde75b',
